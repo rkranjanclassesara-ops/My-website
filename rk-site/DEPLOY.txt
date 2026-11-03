@@ -1,0 +1,25 @@
+FIREBASE CLI SE DEPLOY (apne computer par)
+===========================================
+Pehle ye Firebase console me ho chuka ho:
+  1. Authentication > Sign-in method me Email/Password ON ho.
+  2. Authentication > Users me admin user add ho chuka ho.
+  3. Firestore Database ban chuka ho (location asia-south1, production mode).
+  4. firestore.rules me ADMIN_EMAIL_HERE ki jagah wahi admin email likhi ho.
+
+Phir terminal (Windows me Command Prompt ya PowerShell) kholo. Node.js installed hona chahiye.
+
+  npm install -g firebase-tools
+  firebase login
+  cd rk-site
+  firebase deploy --only firestore:rules
+
+Rules publish ho gaye. Ab site online dalni ho to:
+  1. Apne baaki pages (about.html, courses.html, image folder wagairah) public folder me daal do.
+  2. firebase deploy --only hosting
+Site ye address par khulegi:  https://rk-ranjan-classes-ara.web.app
+Admin page:                   https://rk-ranjan-classes-ara.web.app/admin.html
+
+Agar tumhari site pehle se kahin aur hosted hai (Hostinger, Netlify wagairah),
+to hosting wala step chhod do. Sirf public folder ki teen files wahan upload kar do:
+index.html, admin.html, firebase-config.js
+Aur Authentication > Settings > Authorized domains me apna domain add kar do.
