@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="robots" content="noindex,nofollow"/>
+<title>Admin | RK Ranjan Classes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--g:#0d6e3a;--g2:#15a356;--gp:#e6f4ec;--gb:#b3dcc4;--b:#0a3fa8;--b2:#1a5fcc;--dk:#0a1f0f;--mid:#2d5a3d;--lt:#5a8a6a;--fh:'Playfair Display',serif;}
+body{font-family:'Plus Jakarta Sans','Noto Sans Devanagari',sans-serif;background:linear-gradient(160deg,#eef6f1,#e7effb);color:var(--dk);min-height:100vh;}
+button,input,select,textarea{font-family:inherit;}
+[hidden]{display:none!important;}
+.top{background:linear-gradient(120deg,#0a3a24,#0a3fa8);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;box-shadow:0 6px 24px rgba(10,63,168,.25);}
+.top h1{font-family:var(--fh);font-size:21px;flex:1;min-width:180px;}
+.top small{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:500;opacity:.8;}
+.btn{border:none;border-radius:10px;padding:11px 18px;font-size:14px;font-weight:700;cursor:pointer;transition:transform .15s,filter .15s;}
+.btn:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.07);}
+.btn:disabled{opacity:.6;cursor:wait;}
+.p{background:linear-gradient(135deg,var(--g),var(--b));color:#fff;box-shadow:0 5px 14px rgba(13,110,58,.28);}
+.o{background:#fff;color:var(--g);border:2px solid var(--gb);}
+.w{background:#fff;color:#fff;background:transparent;border:1.5px solid rgba(255,255,255,.5);}
+.d{background:#fff;color:#9b2a1a;border:2px solid #e8c4c0;}
+.sm{padding:7px 12px;font-size:12.5px;border-radius:8px;}
+.wrap{max-width:1000px;margin:0 auto;padding:18px 14px 60px;}
+.card{background:#fff;border:1.5px solid var(--gp);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(13,110,58,.06);margin-top:14px;}
+.card h2{font-size:17px;margin-bottom:12px;}
+label{display:block;font-size:12.5px;font-weight:700;color:var(--mid);margin:12px 0 5px;}
+input,select,textarea{width:100%;border:2px solid var(--gb);border-radius:11px;padding:12px 13px;font-size:15px;outline:none;background:#fff;color:var(--dk);}
+input:focus,select:focus,textarea:focus{border-color:var(--b2);}
+textarea{min-height:150px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+@media(max-width:640px){.row,.row3{grid-template-columns:1fr;}}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.tab{border:2px solid var(--gb);background:#fff;border-radius:100px;padding:9px 18px;font-size:14px;font-weight:700;color:var(--mid);cursor:pointer;}
+.tab.on{background:var(--g);border-color:var(--g);color:#fff;}
+.msg{margin-top:12px;border-radius:10px;padding:10px 13px;font-size:13.5px;line-height:1.5;}
+.msg.e{background:#fdeceb;border:1.5px solid #f0b4ae;color:#9b2a1a;}
+.msg.k{background:#e8f8ee;border:1.5px solid #9fd8b5;color:#0d5c2e;}
+.login{max-width:400px;margin:40px auto;}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:end;}
+.bar>div{flex:1;min-width:150px;}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;}
+@media(max-width:640px){.sum{grid-template-columns:1fr 1fr;}}
+.sum div{background:#fff;border:1.5px solid var(--gp);border-radius:14px;padding:12px;text-align:center;}
+.sum b{display:block;font-family:var(--fh);font-size:24px;color:var(--g);}
+.sum small{font-size:12px;color:var(--lt);font-weight:600;}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:14px;}
+.s{background:#fff;border:1.5px solid var(--gp);border-radius:14px;padding:14px;}
+.s.off{opacity:.6;background:#f3f3f3;}
+.s h3{font-size:15px;display:flex;justify-content:space-between;gap:8px;}
+.s h3 em{font-style:normal;font-size:12px;background:var(--gp);color:var(--g);border-radius:100px;padding:2px 10px;white-space:nowrap;}
+.s p{font-size:12.5px;color:var(--lt);margin:4px 0 10px;line-height:1.6;}
+.s .a{display:flex;gap:6px;flex-wrap:wrap;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid #e3ede7;}
+.md{position:fixed;inset:0;background:rgba(6,20,12,.6);display:flex;align-items:center;justify-content:center;padding:14px;z-index:50;}
+.mc{background:#fff;border-radius:18px;padding:22px;max-width:520px;width:100%;max-height:88vh;overflow:auto;}
+.mc h3{font-family:var(--fh);font-size:21px;color:var(--g);margin-bottom:8px;}
+.acts{display:flex;gap:10px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap;}
+.note{font-size:12.5px;color:var(--lt);line-height:1.6;margin-top:8px;}
+pre{background:#f4f8f5;border-radius:10px;padding:10px;font-size:12.5px;overflow:auto;margin-top:10px;max-height:240px;}
+</style></head><body>
+<div class="top"><h1>RK Ranjan Classes<small>Admin panel</small></h1><span id="who" style="font-size:13px;opacity:.85"></span><button class="btn w sm" id="out" hidden>Logout</button></div>
+<div class="wrap">
+
+<div class="card login" id="lg">
+  <h2>Admin login</h2>
+  <div id="nocfg" class="msg e" hidden>firebase-config.js is not filled in yet. Open SETUP.txt and follow Step 3.</div>
+  <form id="lf">
+    <label for="ae">Admin email</label><input id="ae" type="email" autocomplete="username"/>
+    <label for="ap">Password</label><input id="ap" type="password" autocomplete="current-password"/>
+    <div class="msg e" id="le" hidden></div>
+    <button class="btn p" id="ls" type="submit" style="width:100%;margin-top:16px">Login</button>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <div class="tabs"><button class="tab on" data-t="list">Students</button><button class="tab" data-t="add">Add one student</button><button class="tab" data-t="bulk">Add many (paste list)</button></div>
+
+  <div id="t-list">
+    <div class="card"><div class="bar">
+      <div><label for="fc" style="margin-top:0">Class</label><select id="fc"><option value="">Choose class</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div>
+      <div><label for="fs" style="margin-top:0">Search name or ID</label><input id="fs" placeholder="Type to filter"/></div>
+      <button class="btn p" id="fl">Load students</button>
+      <button class="btn o" id="fd" hidden>Download CSV</button>
+    </div><div class="note">Loading one class at a time keeps the free Firebase quota safe.</div><div class="msg e" id="fe" hidden></div></div>
+    <div class="sum" id="sum" hidden></div>
+    <div class="list" id="ls2"></div>
+  </div>
+
+  <div id="t-add" hidden><div class="card">
+    <h2>Add one student</h2>
+    <div class="row"><div><label for="ni">Student ID (letters and numbers, 3 to 20)</label><input id="ni" placeholder="rkr0101" autocapitalize="none"/></div>
+    <div><label for="nn">Full name</label><input id="nn"/></div></div>
+    <div class="row3"><div><label for="nc">Class</label><select id="nc"><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div>
+    <div><label for="np">Password (min 6)</label><input id="np"/></div>
+    <div><label for="nh">Parent phone (optional)</label><input id="nh" inputmode="tel"/></div></div>
+    <button class="btn o sm" id="ng" style="margin-top:10px">Make a password for me</button>
+    <div class="msg" id="nm" hidden></div>
+    <button class="btn p" id="na" style="margin-top:14px">Create student</button>
+  </div></div>
+
+  <div id="t-bulk" hidden><div class="card">
+    <h2>Add many students</h2>
+    <div class="note">One student per line: <b>id, name, class, password</b>. Password is optional, a random one is made if you leave it empty. You can paste straight from Excel too.</div>
+<pre>rkr0101, Aman Kumar, 8, aman@123
+rkr0102, Priya Singh, 10
+rkr0103, Rohit Raj, 12, </pre>
+    <label for="bt">Paste list here</label><textarea id="bt"></textarea>
+    <button class="btn p" id="bg" style="margin-top:14px">Create all</button>
+    <div class="msg k" id="bs" hidden></div>
+    <div id="br"></div>
+    <button class="btn o" id="bd" hidden style="margin-top:12px">Download ID and password list (CSV)</button>
+    <div class="note" id="bn" hidden>Download this file now. Passwords are not shown again. Give each student their own ID and password.</div>
+  </div></div>
+</div>
+</div>
+<div id="mw"></div>
+
+<script src="firebase-config.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s);};
+var CFG=window.RK_FIREBASE_CONFIG||{};
+var READY=!!(CFG.apiKey&&CFG.projectId&&String(CFG.apiKey).indexOf('PASTE')<0);
+var DOM='students.rkranjanclasses.in',SDK='https://www.gstatic.com/firebasejs/10.12.2/';
+var fb=null,rows=[],cur='';
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function norm(id){return String(id||'').toLowerCase().replace(/[^a-z0-9_]/g,'');}
+function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function genPass(){var c='abcdefghjkmnpqrstuvwxyz23456789',s='';for(var i=0;i<7;i++)s+=c[Math.floor(Math.random()*c.length)];return s;}
+function say(el,t,k){el.className='msg '+(k?'k':'e');el.textContent=t;el.hidden=!t;}
+function csv(rowsArr){return rowsArr.map(function(r){return r.map(function(v){v=String(v==null?'':v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}).join(',');}).join('\r\n');}
+function dl(name,text){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+text],{type:'text/csv;charset=utf-8'}));a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();},500);}
+
+function load(){
+  if(fb)return fb;
+  fb=Promise.all([import(SDK+'firebase-app.js'),import(SDK+'firebase-auth.js'),import(SDK+'firebase-firestore.js')]).then(function(m){
+    var app=m[0].initializeApp(CFG),sec=m[0].initializeApp(CFG,'secondary');
+    return {A:m[1],F:m[2],auth:m[1].getAuth(app),db:m[2].getFirestore(app),secAuth:m[1].getAuth(sec)};
+  });
+  fb.catch(function(){fb=null;});
+  return fb;
+}
+
+/* ---- login ---- */
+if(!READY){$('#nocfg').hidden=false;$('#ls').disabled=true;}
+else{
+  load().then(function(f){f.A.onAuthStateChanged(f.auth,function(u){
+    if(!u){$('#lg').hidden=false;$('#app').hidden=true;$('#out').hidden=true;$('#who').textContent='';return;}
+    if(u.email&&u.email.slice(-DOM.length-1)==='@'+DOM){f.A.signOut(f.auth);return;}
+    // is this really the admin? admin can list students, others get permission denied
+    f.F.getDocs(f.F.query(f.F.collection(f.db,'students'),f.F.limit(1))).then(function(){
+      $('#lg').hidden=true;$('#app').hidden=false;$('#out').hidden=false;$('#who').textContent=u.email;
+    },function(){
+      f.A.signOut(f.auth);say($('#le'),'This account is not the admin account.');
+    });
+  });});
+}
+$('#lf').addEventListener('submit',function(e){
+  e.preventDefault();if(!READY)return;
+  var b=$('#ls');b.disabled=true;say($('#le'),'');
+  load().then(function(f){return f.A.signInWithEmailAndPassword(f.auth,$('#ae').value.trim(),$('#ap').value);})
+  .catch(function(){say($('#le'),'Wrong email or password.');}).then(function(){b.disabled=false;});
+});
+$('#out').addEventListener('click',function(){load().then(function(f){return f.A.signOut(f.auth);});});
+
+/* ---- tabs ---- */
+[].forEach.call(document.querySelectorAll('.tab'),function(t){t.addEventListener('click',function(){
+  [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.toggle('on',x===t);});
+  ['list','add','bulk'].forEach(function(k){$('#t-'+k).hidden=(k!==t.dataset.t);});
+});});
+
+/* ---- create student ---- */
+function createStudent(o){
+  var id=norm(o.id),name=String(o.name||'').trim(),cls=String(o.cls||'').trim(),pass=String(o.pass||'');
+  if(!/^[a-z0-9_]{3,20}$/.test(id))return Promise.reject(new Error('ID must be 3 to 20 letters or numbers'));
+  if(!name)return Promise.reject(new Error('Name is empty'));
+  if(['6','7','8','9','10','11','12'].indexOf(cls)<0)return Promise.reject(new Error('Class must be 6 to 12'));
+  if(pass.length<6)return Promise.reject(new Error('Password needs at least 6 characters'));
+  var email=id+'.v1@'+DOM,now=Date.now();
+  return load().then(function(f){
+    var F=f.F;
+    return F.getDoc(F.doc(f.db,'students',id)).then(function(s){
+      if(s.exists())throw new Error('ID already exists');
+      return f.A.createUserWithEmailAndPassword(f.secAuth,email,pass);
+    }).then(function(c){
+      var uid=c.user.uid;
+      return f.A.signOut(f.secAuth).then(function(){return uid;});
+    }).then(function(uid){
+      return F.setDoc(F.doc(f.db,'students',id),{id:id,name:name,cls:cls,phone:o.phone||'',uid:uid,ver:1,active:true,xp:0,streak:0,lastDay:'',tests:0,correct:0,attempted:0,best:0,badges:[],createdAt:now,updatedAt:now})
+      .then(function(){return F.setDoc(F.doc(f.db,'board',id),{name:name,cls:cls,xp:0,tests:0,streak:0,updatedAt:now});})
+      .then(function(){return F.setDoc(F.doc(f.db,'loginmap',id),{email:email});});
+    });
+  }).catch(function(e){
+    if(e&&e.code==='auth/email-already-in-use')throw new Error('A login for this ID already exists. Use another ID.');
+    if(e&&e.code==='auth/weak-password')throw new Error('Password is too weak');
+    if(e&&e.code==='auth/too-many-requests')throw new Error('Firebase asked to slow down. Wait a few minutes and retry.');
+    throw e;
+  });
+}
+$('#ng').addEventListener('click',function(){$('#np').value=genPass();});
+$('#na').addEventListener('click',function(){
+  var b=this,m=$('#nm');b.disabled=true;say(m,'');
+  var o={id:$('#ni').value,name:$('#nn').value,cls:$('#nc').value,pass:$('#np').value,phone:$('#nh').value.trim()};
+  createStudent(o).then(function(){
+    say(m,'Created. ID: '+norm(o.id)+'   Password: '+o.pass+'   (note it down now)',true);
+    $('#ni').value='';$('#nn').value='';$('#np').value='';$('#nh').value='';
+  }).catch(function(e){say(m,(e&&e.message)||'Could not create');}).then(function(){b.disabled=false;});
+});
+
+/* ---- bulk ---- */
+$('#bg').addEventListener('click',function(){
+  var b=this,lines=$('#bt').value.split(/\r?\n/).map(function(l){return l.trim();}).filter(Boolean);
+  if(!lines.length)return;
+  b.disabled=true;$('#bd').hidden=true;$('#bn').hidden=true;
+  var out=[['id','name','class','password','status']],done=0,ok=0,box=$('#br'),st=$('#bs');
+  box.innerHTML='<table><thead><tr><th>ID</th><th>Name</th><th>Status</th></tr></thead><tbody id="bb"></tbody></table>';
+  var p=Promise.resolve();
+  lines.forEach(function(l){p=p.then(function(){
+    var a=l.split(/\t|,/).map(function(x){return x.trim();});
+    var o={id:a[0],name:a[1],cls:a[2],pass:a[3]||genPass()};
+    return createStudent(o).then(function(){ok++;return 'Created';},function(e){return 'Failed: '+((e&&e.message)||'error');}).then(function(s){
+      done++;out.push([norm(o.id),o.name,o.cls,s==='Created'?o.pass:'',s]);
+      $('#bb').insertAdjacentHTML('beforeend','<tr><td>'+esc(norm(o.id))+'</td><td>'+esc(o.name)+'</td><td style="color:'+(s==='Created'?'#12803f':'#9b2a1a')+'">'+esc(s)+'</td></tr>');
+      say(st,done+' of '+lines.length+' done, '+ok+' created',true);
+      return sleep(350);
+    });
+  });});
+  p.then(function(){b.disabled=false;$('#bd').hidden=false;$('#bn').hidden=false;$('#bd').onclick=function(){dl('students-'+Date.now()+'.csv',csv(out));};});
+});
+
+/* ---- list ---- */
+function ago(t){if(!t)return 'never';var d=Math.floor((Date.now()-t)/86400000);return d<=0?'today':d===1?'yesterday':d+' days ago';}
+function draw(){
+  var q=$('#fs').value.trim().toLowerCase();
+  var list=rows.filter(function(s){return !q||s.name.toLowerCase().indexOf(q)>=0||s.id.indexOf(q)>=0;}).sort(function(a,b){return (b.xp||0)-(a.xp||0);});
+  $('#ls2').innerHTML=list.map(function(s){
+    return '<div class="s'+(s.active===false?' off':'')+'" data-id="'+esc(s.id)+'"><h3><span>'+esc(s.name)+'</span><em>Class '+esc(s.cls)+'</em></h3><p>ID: <b>'+esc(s.id)+'</b>'+(s.phone?'  |  '+esc(s.phone):'')+'<br/>'+(s.xp||0)+' XP  |  '+(s.tests||0)+' tests  |  streak '+(s.streak||0)+'<br/>Last practice: '+ago(s.updatedAt&&s.tests?s.updatedAt:0)+(s.active===false?'<br/><b style="color:#9b2a1a">Disabled</b>':'')+'</p><div class="a"><button class="btn o sm" data-a="res">Results</button><button class="btn o sm" data-a="pw">Reset password</button><button class="btn d sm" data-a="tg">'+(s.active===false?'Enable':'Disable')+'</button></div></div>';
+  }).join('')||'<p class="note" style="margin-top:14px">No student found.</p>';
+}
+$('#fl').addEventListener('click',function(){
+  var c=$('#fc').value,b=this;if(!c){say($('#fe'),'Choose a class first.');return;}
+  b.disabled=true;say($('#fe'),'');
+  load().then(function(f){return f.F.getDocs(f.F.query(f.F.collection(f.db,'students'),f.F.where('cls','==',c)));}).then(function(snap){
+    rows=[];snap.forEach(function(d){var v=d.data();v.id=d.id;rows.push(v);});cur=c;
+    var tests=0,xp=0,act=0;rows.forEach(function(s){tests+=s.tests||0;xp+=s.xp||0;if(s.tests&&Date.now()-s.updatedAt<7*86400000)act++;});
+    $('#sum').hidden=false;$('#sum').innerHTML='<div><b>'+rows.length+'</b><small>Students</small></div><div><b>'+tests+'</b><small>Tests done</small></div><div><b>'+(rows.length?Math.round(xp/rows.length):0)+'</b><small>Average XP</small></div><div><b>'+act+'</b><small>Active in 7 days</small></div>';
+    $('#fd').hidden=!rows.length;draw();
+  }).catch(function(){say($('#fe'),'Could not load. Check your internet and that you are logged in as admin.');}).then(function(){b.disabled=false;});
+});
+$('#fs').addEventListener('input',draw);
+$('#fd').addEventListener('click',function(){
+  dl('class-'+cur+'-students.csv',csv([['id','name','class','parent_phone','xp','tests','streak','active']].concat(rows.map(function(s){return [s.id,s.name,s.cls,s.phone||'',s.xp||0,s.tests||0,s.streak||0,s.active===false?'no':'yes'];}))));
+});
+$('#ls2').addEventListener('click',function(e){
+  var b=e.target.closest('[data-a]');if(!b)return;
+  var id=b.closest('.s').dataset.id,s=rows.filter(function(x){return x.id===id;})[0];
+  if(b.dataset.a==='res')showResults(s);else if(b.dataset.a==='pw')resetPw(s);else toggle(s);
+});
+
+function modal(html){
+  var m=document.createElement('div');m.className='md';m.innerHTML='<div class="mc">'+html+'</div>';
+  m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-close]'))m.remove();});
+  $('#mw').appendChild(m);return m;
+}
+function showResults(s){
+  var m=modal('<h3>'+esc(s.name)+'</h3><p class="note">Loading...</p>');
+  load().then(function(f){return f.F.getDocs(f.F.query(f.F.collection(f.db,'students',s.id,'results'),f.F.orderBy('t','desc'),f.F.limit(30)));}).then(function(snap){
+    var h='<h3>'+esc(s.name)+'</h3><p class="note">Class '+esc(s.cls)+'  |  ID '+esc(s.id)+'  |  last 30 tests</p>';
+    var r=[];snap.forEach(function(d){r.push(d.data());});
+    h+=r.length?'<table><thead><tr><th>Date</th><th>Subject</th><th>Score</th><th>Time</th></tr></thead><tbody>'+r.map(function(x){var d=new Date(x.t);return '<tr><td>'+d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear()+'</td><td>Class '+esc(x.cls)+' '+esc(x.sub)+'</td><td><b>'+(Math.round(x.score*100)/100)+'/'+x.n+'</b> ('+x.pct+'%)</td><td>'+Math.floor(x.secs/60)+'m '+(x.secs%60)+'s</td></tr>';}).join('')+'</tbody></table>':'<p class="note">No tests yet.</p>';
+    h+='<div class="acts"><button class="btn o" data-close>Close</button></div>';
+    m.firstChild.innerHTML=h;
+  }).catch(function(){m.firstChild.innerHTML='<h3>Error</h3><p class="note">Could not load results.</p><div class="acts"><button class="btn o" data-close>Close</button></div>';});
+}
+function resetPw(s){
+  var np=genPass();
+  var m=modal('<h3>Reset password</h3><p class="note">'+esc(s.name)+' ('+esc(s.id)+'). The student keeps all scores and XP. Only the password changes.</p><label for="rp">New password (min 6)</label><input id="rp" value="'+np+'"/><div class="msg" id="rm" hidden></div><div class="acts"><button class="btn o" data-close>Cancel</button><button class="btn p" id="rg">Change password</button></div>');
+  $('#rg',m).addEventListener('click',function(){
+    var b=this,pw=$('#rp',m).value;if(pw.length<6){say($('#rm',m),'Password needs at least 6 characters.');return;}
+    b.disabled=true;
+    var ver=(s.ver||1)+1,email=s.id+'.v'+ver+'@'+DOM;
+    load().then(function(f){
+      return f.A.createUserWithEmailAndPassword(f.secAuth,email,pw).then(function(c){var uid=c.user.uid;return f.A.signOut(f.secAuth).then(function(){return uid;});}).then(function(uid){
+        return f.F.updateDoc(f.F.doc(f.db,'students',s.id),{uid:uid,ver:ver,updatedAt:s.updatedAt||Date.now()}).then(function(){return f.F.setDoc(f.F.doc(f.db,'loginmap',s.id),{email:email});}).then(function(){s.uid=uid;s.ver=ver;});
+      });
+    }).then(function(){say($('#rm',m),'Done. New password: '+pw+'   (note it down now)',true);b.hidden=true;})
+    .catch(function(e){b.disabled=false;say($('#rm',m),(e&&e.code==='auth/too-many-requests')?'Firebase asked to slow down. Wait a few minutes.':'Could not change the password.');});
+  });
+}
+function toggle(s){
+  var to=s.active===false;
+  var m=modal('<h3>'+(to?'Enable':'Disable')+' account?</h3><p class="note">'+esc(s.name)+' ('+esc(s.id)+'). '+(to?'The student can log in again.':'The student can no longer log in. Scores are kept.')+'</p><div class="acts"><button class="btn o" data-close>Cancel</button><button class="btn p" id="tg">Yes</button></div>');
+  $('#tg',m).addEventListener('click',function(){
+    load().then(function(f){return f.F.updateDoc(f.F.doc(f.db,'students',s.id),{active:to});}).then(function(){s.active=to;m.remove();draw();})
+    .catch(function(){m.firstChild.innerHTML='<h3>Error</h3><p class="note">Could not update.</p><div class="acts"><button class="btn o" data-close>Close</button></div>';});
+  });
+}
+})();
+</script>
+</body></html>

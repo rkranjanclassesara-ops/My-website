@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Student Login | RK Ranjan Classes, Arrah</title>
+<meta name="description" content="Student login for RK Ranjan Classes: see your practice scores, XP, streak, badges and weak chapters."/>
+<meta name="theme-color" content="#040b1c"/>
+<link rel="icon" href="image/logo.webp" type="image/webp"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"/><link rel="preconnect" href="https://cdnjs.cloudflare.com"/><link rel="preconnect" href="https://unpkg.com"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Serif+Devanagari:wght@700&display=swap" rel="stylesheet"/>
+<script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.4"></script>
+<style type="text/tailwindcss">@layer theme, base, components, utilities;@import "tailwindcss/theme.css" layer(theme);@import "tailwindcss/utilities.css" layer(utilities);</style>
+<script defer src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<link rel="stylesheet" href="assets/site.css"/><link rel="stylesheet" href="assets/pages.css"/>
+</head><body class="sub">
+<canvas id="bg3d" aria-hidden="true"></canvas><div class="vig" aria-hidden="true"></div>
+<div id="sp"></div>
+<nav id="nav"><a class="nl" href="index.html"><img src="image/logo.webp" alt="RK Ranjan Classes logo" width="42" height="42"/><div class="nlt"><strong>RK Ranjan Classes</strong><span>Arrah, Bihar &middot; Since 2020</span></div></a>
+<div class="nm" id="nm"><a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a><a href="fee.html">Fee</a><a href="practice.html" class="rkp-nav">Practice Test</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="founder.html">Founder</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>
+<div class="nr"><a class="cta-nav" href="contact.html">Free Demo</a><button class="hbg" id="hbg" type="button" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main><header class="ph" data-scene="practice"><div class="mw"><div class="phl"><div class="crumb"><a href="index.html">Home</a><span>/</span><span>Student Login</span></div><span class="tag">For RK Ranjan Classes students</span><h1 class="st">Your <em>progress</em>, in one place</h1><p class="lead">Login with your Student ID to see your test scores, XP, streak, badges and weak chapters. This phone will remember you after the first login.</p><div class="hbtns btnrow"><button type="button" class="btn btn-w" id="lgo"><i data-lucide="log-in"></i> Login to my dashboard</button><a class="btn btn-gl" href="practice.html"><i data-lucide="pen-line"></i> Try a practice test</a></div></div><div class="phv"><div class="gc hot" data-tilt style="text-align:center;padding:34px"><div class="gi" style="margin:0 auto;width:72px;height:72px;font-size:34px">&#127891;</div><h3 style="font-size:24px">Student dashboard</h3><p>Score history, class leaderboard and badges after every test you take.</p></div></div></div></header>
+<section class="sec" data-scene="why" data-bgw="DASHBOARD"><div class="mw"><div class="ct"><span class="tag rv">What you get</span><h2 class="st rv d1">Everything about your practice</h2></div><div class="g3"><div class="gc rv d1" data-tilt><div class="gi"><i data-lucide="bar-chart-3"></i></div><h3>Score history</h3><p>Every practice test you take is saved with date, subject and score.</p></div><div class="gc rv d2" data-tilt><div class="gi"><i data-lucide="zap"></i></div><h3>XP and streak</h3><p>Earn XP for every test and keep your daily streak alive.</p></div><div class="gc rv d3" data-tilt><div class="gi"><i data-lucide="medal"></i></div><h3>Badges</h3><p>Unlock badges as you practise more and score higher.</p></div><div class="gc rv d1" data-tilt><div class="gi"><i data-lucide="target"></i></div><h3>Weak chapters</h3><p>See which chapters need work so you revise smartly.</p></div><div class="gc rv d2" data-tilt><div class="gi"><i data-lucide="trophy"></i></div><h3>Class leaderboard</h3><p>Friendly competition with students in your own class.</p></div><div class="gc rv d3" data-tilt><div class="gi"><i data-lucide="smartphone"></i></div><h3>Remembers you</h3><p>Login once and your phone remembers your ID.</p></div></div></div></section>
+<section class="sec" data-scene="about"><div class="mw"><div class="g2"><div class="gc rvl" data-tilt><span class="kk">Do not have an ID?</span><h3>Ask the institute</h3><p>Student IDs are created by RK Ranjan Classes for enrolled students. Call or WhatsApp and we will help you right away.</p><div class="btnrow"><a class="btn btn-g btn-sm" href="tel:+919693966317"><i data-lucide="phone"></i> Call 96939 66317</a><a class="btn btn-o btn-sm" href="https://wa.me/919693966317?text=Hello%20Sir%2C%20I%20need%20my%20student%20login%20ID." target="_blank" rel="noopener">WhatsApp</a></div></div><div class="gc rvr" data-tilt><span class="kk">Not a student yet?</span><h3>Start with a free demo</h3><p>You can take practice tests without logging in. Join the institute to get your own login and track your progress.</p><div class="btnrow"><a class="btn btn-g btn-sm" href="contact.html">Book free demo</a><a class="btn btn-o btn-sm" href="courses.html">View courses</a></div></div></div></div></section>
+</main>
+<footer><div class="mw"><div class="fgr"><div class="fc0"><div class="nl"><img src="image/logo.webp" alt="" width="42" height="42"/><div class="nlt"><strong>RK Ranjan Classes</strong><span>Learn and Grow &middot; Since 2020</span></div></div>
+<p>Arrah's trusted coaching institute. 3800+ students. Expert CBSE and Bihar Board coaching, Class 6 to 12.</p><div class="soc"><a href="https://www.instagram.com/rkranjanclasses/" target="_blank" rel="noopener"><i data-lucide="instagram"></i> Instagram</a><a href="https://www.facebook.com/rkranjanclasses/" target="_blank" rel="noopener"><i data-lucide="facebook"></i> Facebook</a><a href="https://wa.me/919693966317" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a></div></div>
+<div><h4>Quick Links</h4><ul class="ql"><li><a href="index.html"><i data-lucide="home"></i>Home</a></li><li><a href="about.html"><i data-lucide="info"></i>About Us</a></li><li><a href="courses.html"><i data-lucide="book-open"></i>Courses</a></li><li><a href="fee.html"><i data-lucide="wallet"></i>Fee Structure</a></li><li><a href="practice.html"><i data-lucide="pen-line"></i>Practice Test</a></li><li><a href="gallery.html"><i data-lucide="images"></i>Gallery</a></li><li><a href="reviews.html"><i data-lucide="star"></i>Reviews</a></li><li><a href="founder.html"><i data-lucide="user-round"></i>Founder</a></li><li><a href="donate.html"><i data-lucide="heart"></i>Donate</a></li><li><a href="contact.html"><i data-lucide="phone-call"></i>Contact</a></li></ul></div>
+<div><h4>Contact</h4><ul class="ql"><li><a href="tel:+919693966317"><i data-lucide="phone"></i>+91 96939 66317</a></li><li><a href="https://wa.me/919693966317" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a></li><li><a href="mailto:rkranjanclassesara@gmail.com"><i data-lucide="mail"></i>rkranjanclassesara@gmail.com</a></li><li><a href="https://maps.app.goo.gl/ZEVUGpryDXGK5Piy5" target="_blank" rel="noopener"><i data-lucide="map-pin"></i>KG Road, Rajendra Nagar, Arrah</a></li><li><a href="https://share.google/MCUPmBTTpaE9rXqeT" target="_blank" rel="noopener"><i data-lucide="star"></i>Write a Review</a></li></ul></div>
+</div><div class="cpy">&copy; 2026 RK Ranjan Classes &middot; KG Road, Rajendra Nagar, Nawada, Arrah, Bihar 802301 &middot; Reg. No. BR-08-0004021 &middot; All Rights Reserved</div><div class="dm">Design and Made By : RK Solutions, Ara</div></div></footer>
+<div class="mb" id="mb"><a href="index.html"><i data-lucide="house"></i> Home</a><a href="tel:+919693966317"><i data-lucide="phone"></i> Call</a><a href="practice.html" class="pr"><i data-lucide="pencil-line"></i> Practice</a><button type="button" id="mb-l"><i data-lucide="user-round"></i> Login</button><a href="https://wa.me/919693966317" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Chat</a></div>
+<div id="rka-lg" class="rka-ov rka-lgov" hidden>
+  <div class="rka-card" role="dialog" aria-modal="true" aria-labelledby="rka-lt">
+    <button type="button" class="rka-x" id="rka-lx" aria-label="Close">&times;</button>
+    <div class="rka-ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+    <h3 id="rka-lt">Student Login</h3>
+    <p class="rka-sub">अपनी ID और password से login करें। एक बार login के बाद ये phone आपको याद रखेगा।</p>
+    <form id="rka-form" autocomplete="on" novalidate>
+      <label for="rka-id">Student ID</label>
+      <input id="rka-id" name="username" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Example: rkr0101"/>
+      <label for="rka-pw">Password</label>
+      <div class="rka-pwr"><input id="rka-pw" name="password" type="password" autocomplete="current-password" placeholder="Your password"/><button type="button" id="rka-eye">Show</button></div>
+      <div class="rka-err" id="rka-err" role="alert" hidden></div>
+      <button class="rka-go" id="rka-sub" type="submit">Login</button>
+    </form>
+    <div class="rka-off" id="rka-off" hidden>Student login will start very soon.<br/>Student login जल्द शुरू होगा।</div>
+    <div class="rka-help">Do not have an ID? Ask the institute.<br/><a href="tel:+919693966317">Call 96939 66317</a></div>
+  </div>
+</div>
+<div id="rka-db" class="rka-ov rka-dbov" hidden>
+  <div class="rka-dwrap" role="dialog" aria-modal="true" aria-label="My dashboard">
+    <header class="rka-dh">
+      <div><h3 id="rka-dname">My Dashboard</h3><span id="rka-dsub"></span></div>
+      <button type="button" class="rka-dx" id="rka-dx" aria-label="Close">&times;</button>
+    </header>
+    <div class="rka-dbody" id="rka-dbody"></div>
+  </div>
+</div>
+
+
+<script defer src="assets/universe.js"></script>
+<script defer src="assets/page.js"></script>
+<script defer src="firebase-config.js"></script>
+<script defer src="assets/account.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('lgo');b.addEventListener('click',function(){if(window.RKAccount&&RKAccount.toggle)RKAccount.toggle();});
+if(location.hash==='#open'){setTimeout(function(){if(window.RKAccount&&RKAccount.toggle)RKAccount.toggle();},500);}});</script>
+</body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Free Practice Test, Class 6 to 12 | RK Ranjan Classes, Arrah</title>
+<meta name="description" content="Free online practice tests for Class 6 to 12, all subjects. Exam style timer, question palette and instant result with explanations."/>
+<meta name="theme-color" content="#040b1c"/>
+<link rel="icon" href="image/logo.webp" type="image/webp"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"/><link rel="preconnect" href="https://cdnjs.cloudflare.com"/><link rel="preconnect" href="https://unpkg.com"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Serif+Devanagari:wght@700&display=swap" rel="stylesheet"/>
+<script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.4"></script>
+<style type="text/tailwindcss">@layer theme, base, components, utilities;@import "tailwindcss/theme.css" layer(theme);@import "tailwindcss/utilities.css" layer(utilities);</style>
+<script defer src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<link rel="stylesheet" href="assets/site.css"/><link rel="stylesheet" href="assets/pages.css"/>
+</head><body class="sub">
+<canvas id="bg3d" aria-hidden="true"></canvas><div class="vig" aria-hidden="true"></div>
+<div id="sp"></div>
+<nav id="nav"><a class="nl" href="index.html"><img src="image/logo.webp" alt="RK Ranjan Classes logo" width="42" height="42"/><div class="nlt"><strong>RK Ranjan Classes</strong><span>Arrah, Bihar &middot; Since 2020</span></div></a>
+<div class="nm" id="nm"><a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a><a href="fee.html">Fee</a><a href="practice.html" class="on" class="rkp-nav on">Practice Test</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="founder.html">Founder</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>
+<div class="nr"><a class="cta-nav" href="contact.html">Free Demo</a><button class="hbg" id="hbg" type="button" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<main><section class="sec rkp-sec" id="practice" data-scene="practice" style="padding-top:124px"><div class="crumb" style="justify-content:center;position:relative;z-index:2"><a href="index.html">Home</a><span>/</span><span>Practice Test</span></div>
+  <div class="mw">
+    <div class="ct">
+      <span class="tag rv">Free practice zone</span>
+      <h2 class="st rv">Practice Like the Real Exam</h2>
+      <p class="psub rv" style="margin-top:6px;">Questions for every subject from Class 6 to 12, with a timer, question palette and instant result, just like a real exam. Completely free.</p>
+      <div class="rkp-feats rv">
+        <span class="rkp-feat">&#9201;&#65039; Live Timer</span>
+        <span class="rkp-feat">&#128290; Question Palette</span>
+        <span class="rkp-feat">&#128204; Mark for Review</span>
+        <span class="rkp-feat">&#128200; Instant Result</span>
+        <span class="rkp-feat">&#128161; Explanation for every answer</span>
+        <span class="rkp-feat" id="rkp-count">&#128218; 444 Questions</span>
+      </div>
+    </div>
+    <div class="rkp-card rv">
+      <h3 class="rkp-step"><span>1</span>Choose your class</h3>
+      <div class="rkp-classes" id="rkp-classes"></div>
+      <div class="rkp-blk" id="rkp-s2" hidden>
+        <h3 class="rkp-step"><span>2</span>Choose a subject</h3>
+        <div class="rkp-subs" id="rkp-subs"></div>
+      </div>
+      <div class="rkp-blk" id="rkp-s3" hidden>
+        <h3 class="rkp-step"><span>3</span>Start your test</h3>
+        <div class="rkp-launch">
+          <div class="rkp-li"><b id="rkp-lt"></b><div id="rkp-lp"></div></div>
+          <div class="rkp-lang" id="rkp-lang" role="group" aria-label="Language"><span>Language / भाषा</span><button type="button" data-l="en">English</button><button type="button" data-l="hi">हिंदी</button></div><div class="rkp-lh" id="rkp-lh" hidden></div>
+          <label class="rkp-neg"><input type="checkbox" id="rkp-neg"/><span class="rkp-sw"></span>Negative marking (-0.25)</label>
+          <button class="rkp-go" id="rkp-go" type="button">&#9654; Start Test</button>
+        </div>
+      </div>
+    </div>
+    <div class="rkp-hist" id="rkp-hist" hidden></div>
+  </div>
+</section><section class="sec" data-scene="story"><div class="mw"><div class="ct"><span class="tag rv">How it works</span><h2 class="st rv d1">Practice, learn, improve</h2><p class="psub rv d2">Free for every student. No signup needed to try a test.</p></div><div class="g4"><div class="gc rv d1" data-tilt><span class="num">1</span><div class="gi"><i data-lucide="mouse-pointer-click"></i></div><h3>Pick class and subject</h3><p>Choose Class 6 to 12 and any subject. Every subject has chapter wise questions.</p></div><div class="gc rv d2" data-tilt><span class="num">2</span><div class="gi"><i data-lucide="timer"></i></div><h3>Take the test</h3><p>Timer, question palette, mark for review and optional negative marking, just like a real exam.</p></div><div class="gc rv d3" data-tilt><span class="num">3</span><div class="gi"><i data-lucide="line-chart"></i></div><h3>See your result</h3><p>Score, accuracy and an explanation for every answer, so you learn from each mistake.</p></div><div class="gc rv d4" data-tilt><span class="num">4</span><div class="gi"><i data-lucide="trophy"></i></div><h3>Login and track progress</h3><p>Student login saves your scores, XP, streak and badges, and shows your weak chapters.</p></div></div></div></section>
+<section class="sec" data-scene="enquire"><div class="mw"><div class="band rv"><h2>Want these scores in class too?</h2><p>Join RK Ranjan Classes and practise with chapter tests every 2 weeks, plus doubt sessions with R.K. Ranjan Sir.</p><div class="btnrow"><a class="btn btn-w" href="tel:+919693966317"><i data-lucide="phone"></i> Call +91 96939 66317</a><a class="btn btn-gl" href="https://wa.me/919693966317?text=Hello%20RK%20Ranjan%20Classes%2C%20I%20want%20to%20book%20a%20free%20demo%20class." target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp now</a><a class="btn btn-gl" href="contact.html"><i data-lucide="map-pin"></i> Visit us</a></div></div></div></section>
+
+<div id="rkp-ov" class="rkp-ov" role="dialog" aria-modal="true" aria-label="Practice Test" hidden>
+  <!-- INSTRUCTIONS -->
+  <div class="rkp-stage" id="rkp-ins">
+    <div class="rkp-iw"><div class="rkp-ic">
+      <h2>Instructions <span style="font-size:18px;color:var(--lt)">| निर्देश</span></h2>
+      <div class="sub" id="rkp-ins-sub"></div>
+      <ol id="rkp-ins-list"></ol>
+      <div class="lg" style="margin-top:14px;">
+        <div><i class="nv">1</i>Not Visited</div>
+        <div><i class="na">2</i>Not Answered</div>
+        <div><i class="an">3</i>Answered</div>
+        <div><i class="mk">4</i>Marked for Review</div>
+        <div><i class="am">5</i>Answered &amp; Marked</div>
+      </div>
+      <div class="rkp-form">
+        <div><label class="t" for="rkp-name">Your Name | आपका नाम</label><input type="text" id="rkp-name" maxlength="30" placeholder="Enter your name" autocomplete="name"/></div>
+        <label class="rkp-agree"><input type="checkbox" id="rkp-agree"/><span>I have read all the instructions and I am ready to begin. <br/>मैंने सभी निर्देश पढ़ लिए हैं और मैं टेस्ट शुरू करने के लिए तैयार हूँ।</span></label>
+        <div class="rkp-ia"><button type="button" class="rkp-b sv" id="rkp-begin" disabled>Begin Test &#9654;</button><button type="button" class="rkp-b cl" id="rkp-back">&larr; Go Back</button></div>
+      </div>
+    </div></div>
+  </div>
+  <!-- COUNTDOWN -->
+  <div class="rkp-stage" id="rkp-cd"><p>Test starts in</p><div id="rkp-cdn">3</div></div>
+  <!-- EXAM -->
+  <div class="rkp-stage" id="rkp-ex">
+    <header class="rkp-hd">
+      <img id="rkp-logo" alt="" src="image/logo.webp"/>
+      <div class="rkp-ht"><b>RK Ranjan Classes</b><span id="rkp-sub">Online Practice Test</span></div>
+      <div class="rkp-sp"></div>
+      <div class="rkp-cand"><span class="rkp-av" id="rkp-av">S</span><em id="rkp-cn">Student</em></div>
+      <div class="rkp-tm" id="rkp-tm"><small>Time Left</small><b id="rkp-tv">00:00</b></div>
+      <button type="button" class="rkp-ib" id="rkp-lgb" aria-label="Change language">हिंदी</button>
+      <button type="button" class="rkp-ib rkp-pbtn" id="rkp-pbtn">&#9776; Palette</button>
+      <button type="button" class="rkp-ib" id="rkp-exit">Exit</button>
+    </header>
+    <div class="rkp-main">
+      <section class="rkp-q">
+        <div class="rkp-qh"><b id="rkp-qn">Question 1</b><span class="rkp-qsub" id="rkp-qs" hidden></span><span class="rkp-sp"></span><span class="rkp-chip">+1 Mark</span><span class="rkp-chip n" id="rkp-negchip" hidden>-0.25</span></div>
+        <div class="rkp-qb f" id="rkp-qb" tabindex="-1"></div>
+        <div class="rkp-ft">
+          <button type="button" class="rkp-b mk" id="rkp-mk">Mark for Review &amp; Next</button>
+          <button type="button" class="rkp-b cl" id="rkp-cl">Clear Response</button>
+          <span class="rkp-fs"></span>
+          <button type="button" class="rkp-b pv" id="rkp-pv">&larr; Previous</button>
+          <button type="button" class="rkp-b sv" id="rkp-sv">Save &amp; Next &rarr;</button>
+          <button type="button" class="rkp-b sb" id="rkp-sb">Submit</button>
+        </div>
+      </section>
+      <div class="rkp-bd" id="rkp-bd"></div>
+      <aside class="rkp-pal" id="rkp-pal">
+        <div class="rkp-pt">Question Palette</div>
+        <div class="rkp-lg">
+          <div><i class="an" id="rkp-c-an">0</i>Answered</div>
+          <div><i class="na" id="rkp-c-na">0</i>Not Answered</div>
+          <div><i class="nv" id="rkp-c-nv">0</i>Not Visited</div>
+          <div><i class="mk" id="rkp-c-mk">0</i>Marked</div>
+          <div style="grid-column:1/-1"><i class="am" id="rkp-c-am">0</i>Answered &amp; Marked (counted as answered)</div>
+        </div>
+        <div class="rkp-pg" id="rkp-pg"></div>
+        <div class="rkp-pf"><button type="button" class="rkp-b sb" id="rkp-sb2">Submit Test</button></div>
+      </aside>
+    </div>
+  </div>
+  <!-- RESULT -->
+  <div class="rkp-stage" id="rkp-rs">
+    <div class="rkp-rw" id="rkp-rw"></div>
+  </div>
+  <div id="rkp-layer"></div>
+  <canvas id="rkp-cf"></canvas>
+</div>
+
+</main>
+<footer><div class="mw"><div class="fgr"><div class="fc0"><div class="nl"><img src="image/logo.webp" alt="" width="42" height="42"/><div class="nlt"><strong>RK Ranjan Classes</strong><span>Learn and Grow &middot; Since 2020</span></div></div>
+<p>Arrah's trusted coaching institute. 3800+ students. Expert CBSE and Bihar Board coaching, Class 6 to 12.</p><div class="soc"><a href="https://www.instagram.com/rkranjanclasses/" target="_blank" rel="noopener"><i data-lucide="instagram"></i> Instagram</a><a href="https://www.facebook.com/rkranjanclasses/" target="_blank" rel="noopener"><i data-lucide="facebook"></i> Facebook</a><a href="https://wa.me/919693966317" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a></div></div>
+<div><h4>Quick Links</h4><ul class="ql"><li><a href="index.html"><i data-lucide="home"></i>Home</a></li><li><a href="about.html"><i data-lucide="info"></i>About Us</a></li><li><a href="courses.html"><i data-lucide="book-open"></i>Courses</a></li><li><a href="fee.html"><i data-lucide="wallet"></i>Fee Structure</a></li><li><a href="practice.html"><i data-lucide="pen-line"></i>Practice Test</a></li><li><a href="gallery.html"><i data-lucide="images"></i>Gallery</a></li><li><a href="reviews.html"><i data-lucide="star"></i>Reviews</a></li><li><a href="founder.html"><i data-lucide="user-round"></i>Founder</a></li><li><a href="donate.html"><i data-lucide="heart"></i>Donate</a></li><li><a href="contact.html"><i data-lucide="phone-call"></i>Contact</a></li></ul></div>
+<div><h4>Contact</h4><ul class="ql"><li><a href="tel:+919693966317"><i data-lucide="phone"></i>+91 96939 66317</a></li><li><a href="https://wa.me/919693966317" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a></li><li><a href="mailto:rkranjanclassesara@gmail.com"><i data-lucide="mail"></i>rkranjanclassesara@gmail.com</a></li><li><a href="https://maps.app.goo.gl/ZEVUGpryDXGK5Piy5" target="_blank" rel="noopener"><i data-lucide="map-pin"></i>KG Road, Rajendra Nagar, Arrah</a></li><li><a href="https://share.google/MCUPmBTTpaE9rXqeT" target="_blank" rel="noopener"><i data-lucide="star"></i>Write a Review</a></li></ul></div>
+</div><div class="cpy">&copy; 2026 RK Ranjan Classes &middot; KG Road, Rajendra Nagar, Nawada, Arrah, Bihar 802301 &middot; Reg. No. BR-08-0004021 &middot; All Rights Reserved</div><div class="dm">Design and Made By : RK Solutions, Ara</div></div></footer>
+<div class="mb" id="mb"><a href="index.html"><i data-lucide="house"></i> Home</a><a href="tel:+919693966317"><i data-lucide="phone"></i> Call</a><a href="practice.html" class="pr"><i data-lucide="pencil-line"></i> Practice</a><button type="button" id="mb-l"><i data-lucide="user-round"></i> Login</button><a href="https://wa.me/919693966317" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Chat</a></div>
+<div id="rka-lg" class="rka-ov rka-lgov" hidden>
+  <div class="rka-card" role="dialog" aria-modal="true" aria-labelledby="rka-lt">
+    <button type="button" class="rka-x" id="rka-lx" aria-label="Close">&times;</button>
+    <div class="rka-ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+    <h3 id="rka-lt">Student Login</h3>
+    <p class="rka-sub">अपनी ID और password से login करें। एक बार login के बाद ये phone आपको याद रखेगा।</p>
+    <form id="rka-form" autocomplete="on" novalidate>
+      <label for="rka-id">Student ID</label>
+      <input id="rka-id" name="username" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Example: rkr0101"/>
+      <label for="rka-pw">Password</label>
+      <div class="rka-pwr"><input id="rka-pw" name="password" type="password" autocomplete="current-password" placeholder="Your password"/><button type="button" id="rka-eye">Show</button></div>
+      <div class="rka-err" id="rka-err" role="alert" hidden></div>
+      <button class="rka-go" id="rka-sub" type="submit">Login</button>
+    </form>
+    <div class="rka-off" id="rka-off" hidden>Student login will start very soon.<br/>Student login जल्द शुरू होगा।</div>
+    <div class="rka-help">Do not have an ID? Ask the institute.<br/><a href="tel:+919693966317">Call 96939 66317</a></div>
+  </div>
+</div>
+<div id="rka-db" class="rka-ov rka-dbov" hidden>
+  <div class="rka-dwrap" role="dialog" aria-modal="true" aria-label="My dashboard">
+    <header class="rka-dh">
+      <div><h3 id="rka-dname">My Dashboard</h3><span id="rka-dsub"></span></div>
+      <button type="button" class="rka-dx" id="rka-dx" aria-label="Close">&times;</button>
+    </header>
+    <div class="rka-dbody" id="rka-dbody"></div>
+  </div>
+</div>
+
+
+<script defer src="assets/universe.js"></script>
+<script defer src="assets/page.js"></script>
+<script defer src="firebase-config.js"></script>
+<script defer src="assets/account.js"></script>
+<script defer src="assets/practice.js"></script>
+
+</body></html>
