@@ -2,7 +2,7 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // CHANGE THIS to the email of the admin user you create in Firebase Authentication.
+    // Admin = the email of the admin user in Firebase Authentication.
     function isAdmin() {
       return request.auth != null && request.auth.token.email == 'rkranjanclassesara@gmail.com';
     }
@@ -11,17 +11,46 @@ service cloud.firestore {
     function owns(id) {
       return signedIn() && student(id).uid == request.auth.uid && student(id).active == true;
     }
+    // A student who signs up by themselves gets the hidden email  <id>.v1@students.rkranjanclasses.in
+    function selfMail(id) {
+      return signedIn() && id.matches('^[a-z0-9_]{3,20}$')
+        && request.auth.token.email == id + '.v1@students.rkranjanclasses.in';
+    }
+    function validClass(c) { return c in ['6','7','8','9','10','11','12']; }
 
-    // Used only to turn a Student ID into the hidden login email. One document at a time, no listing.
+    // Turns a Student ID into the hidden login email. One document at a time, no listing.
     match /loginmap/{id} {
       allow get: if true;
       allow list: if false;
-      allow write: if isAdmin();
+      allow create: if isAdmin() || (selfMail(id) && request.resource.data.email == request.auth.token.email
+                        && request.resource.data.keys().hasOnly(['email']));
+      allow update, delete: if isAdmin();
+    }
+
+    // One account per mobile number. Only the admin can read this list.
+    match /mobiles/{m} {
+      allow read: if isAdmin();
+      allow create: if signedIn() && m.matches('^[6-9][0-9]{9}$')
+                    && request.resource.data.keys().hasOnly(['uid','id'])
+                    && request.resource.data.uid == request.auth.uid
+                    && selfMail(request.resource.data.id);
+      allow update, delete: if isAdmin();
     }
 
     match /students/{id} {
       allow read: if isAdmin() || owns(id);
-      allow create, delete: if isAdmin();
+      allow delete: if isAdmin();
+      allow create: if isAdmin() || (
+        selfMail(id)
+        && request.resource.data.keys().hasOnly(['id','name','cls','board','school','phone','src','uid','ver','active','xp','streak','lastDay','tests','correct','attempted','best','badges','createdAt','updatedAt'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.id == id
+        && request.resource.data.active == true
+        && request.resource.data.name is string && request.resource.data.name.size() >= 2 && request.resource.data.name.size() <= 60
+        && validClass(request.resource.data.cls)
+        && request.resource.data.xp == 0 && request.resource.data.tests == 0 && request.resource.data.streak == 0
+        && request.resource.data.correct == 0 && request.resource.data.attempted == 0 && request.resource.data.best == 0
+      );
       allow update: if isAdmin() || (
         owns(id)
         && request.resource.data.diff(resource.data).affectedKeys()
@@ -39,15 +68,23 @@ service cloud.firestore {
       }
     }
 
-    // Public part of a profile for the class leaderboard. No phone number here.
+    // Public part of a profile for the leaderboard. No phone number here.
     match /board/{id} {
       allow read: if signedIn();
-      allow create, delete: if isAdmin();
+      allow delete: if isAdmin();
+      allow create: if isAdmin() || (
+        selfMail(id)
+        && request.resource.data.keys().hasOnly(['name','cls','xp','tests','streak','updatedAt'])
+        && validClass(request.resource.data.cls)
+        && request.resource.data.xp == 0
+        && getAfter(/databases/$(database)/documents/students/$(id)).data.uid == request.auth.uid
+      );
       allow update: if isAdmin() || (
         owns(id)
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['xp','tests','streak','updatedAt'])
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['xp','tests','streak','updatedAt','wk','wpct'])
         && request.resource.data.xp >= resource.data.xp
         && request.resource.data.xp - resource.data.xp <= 500
+        && (!('wpct' in request.resource.data) || (request.resource.data.wpct is number && request.resource.data.wpct >= 0 && request.resource.data.wpct <= 100))
       );
     }
   }
