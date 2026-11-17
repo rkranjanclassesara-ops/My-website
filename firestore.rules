@@ -87,5 +87,18 @@ service cloud.firestore {
         && (!('wpct' in request.resource.data) || (request.resource.data.wpct is number && request.resource.data.wpct >= 0 && request.resource.data.wpct <= 100))
       );
     }
+    match /meta/{d} {
+      allow read: if signedIn();
+      allow create: if signedIn() && d == 'certs' && request.resource.data.keys().hasOnly(['n']) && request.resource.data.n == 1;
+      allow update: if signedIn() && d == 'certs' && request.resource.data.keys().hasOnly(['n']) && request.resource.data.n == resource.data.n + 1;
+    }
+    match /certs/{no} {
+      allow create: if signedIn() && no.matches('^RKRC-PTC-[0-9]{2,6}$')
+        && request.resource.data.keys().hasOnly(['no','sid','name','cls','sub','pct','at','uid'])
+        && request.resource.data.no == no
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.pct is number && request.resource.data.pct >= 75 && request.resource.data.pct <= 100;
+      allow read, update, delete: if isAdmin();
+    }
   }
 }
